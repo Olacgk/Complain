@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -23,20 +24,22 @@ class Welcome extends StatelessWidget {
               Container(
                   width: 160,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+                    borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
                     border: Border.all(color: Colors.grey, style: BorderStyle.solid, width: 1.0)
                   ),
-                  child: const MaterialButton(
-                    onPressed: null,
-                    child: Text('Connexion',
+                  child: MaterialButton(
+                    onPressed: ()=>{
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()))
+                    },
+                    child: const Text('Connexion',
                         style: TextStyle(color: Colors.black, fontSize: 15.0)),
                   )
               ),
-              const SizedBox(height: 20,),
+              const SizedBox(height: 10,),
               Container(
                   width: 160,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+                      borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
                       border: Border.all(color: Colors.grey, style: BorderStyle.solid, width: 1.0)
                   ),
                   child: const MaterialButton(

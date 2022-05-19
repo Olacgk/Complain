@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  shared_preferences: ^2.0.15
   flutter_test:
     sdk: flutter
 
@@ -59,6 +60,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/back1.png
     - assets/images/back.png
     - assets/images/logo.png
 
