@@ -1,5 +1,5 @@
+import 'package:complain_app/screens/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -89,13 +89,18 @@ class LoginState extends State<Login>{
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 70.0),
                     child: Row(
-                      children: const [
+                      children: [
                         InkWell(
-                          onTap: null,
-                          child: Text('Inscription'),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignUp()));
+                          },
+                          child: const Text('Inscription'),
                         ),
-                        SizedBox(width: 70,),
-                        InkWell(
+                        const SizedBox(width: 70,),
+                        const InkWell(
                           onTap: null,
                           child: Text('Mot de passe oublié?'),
                         )

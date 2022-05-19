@@ -1,3 +1,4 @@
+import 'package:complain_app/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 
@@ -42,9 +43,14 @@ class Welcome extends StatelessWidget {
                       borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
                       border: Border.all(color: Colors.grey, style: BorderStyle.solid, width: 1.0)
                   ),
-                  child: const MaterialButton(
-                    onPressed: null,
-                    child: Text('Inscription',
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignUp()));
+                    },
+                    child: const Text('Inscription',
                         style: TextStyle(color: Colors.black, fontSize: 15.0)),
                   )
               ),
