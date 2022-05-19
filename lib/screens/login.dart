@@ -1,3 +1,4 @@
+import 'package:complain_app/screens/home.dart';
 import 'package:complain_app/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -78,10 +79,10 @@ class LoginState extends State<Login>{
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 30.0),
                     child: Row(
-                      children: const [
+                      children: [
                         Text('Connexion', style: TextStyle(fontSize: 25),),
                         SizedBox(width: 100,),
-                        FloatingActionButton.small(onPressed: null,
+                        FloatingActionButton.small(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));},
                         child: Icon(Icons.navigate_next),backgroundColor: Color.fromRGBO(79, 119, 223, 1.0),)
                       ],
                     ),
