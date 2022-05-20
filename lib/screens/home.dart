@@ -32,8 +32,8 @@ class HomeState extends State<Home>{
                   Image.asset('assets/images/profil.png',),
                   const SizedBox(width: 20.0,),
                   Column(
-                    children: [
-                      const SizedBox(height: 90.0,),
+                    children: const [
+                      SizedBox(height: 90.0,),
                       Text('name'),
                       Text('email')
                     ],
@@ -41,19 +41,19 @@ class HomeState extends State<Home>{
                 ],
               ),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.home_outlined, color: Color.fromRGBO(79, 119, 223, 1.0),),
               title: Text('Home'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.person_outline, color: Color.fromRGBO(79, 119, 223, 1.0),),
               title: Text('Profile'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.settings, color: Color.fromRGBO(79, 119, 223, 1.0),),
               title: Text('Paramètre'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.info_outline, color: Color.fromRGBO(79, 119, 223, 1.0),),
               title: Text('A propos  de nous'),
             ),
