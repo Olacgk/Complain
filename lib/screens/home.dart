@@ -16,10 +16,19 @@ class HomeState extends State<Home>{
         backgroundColor: const Color.fromRGBO(79, 119, 223, 1.0),
       ),
       drawer: Drawer(
-        child: ListView(
+        child: Column(
           children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/Nature-Quotes.png'),
+                fit: BoxFit.cover
+              ),
+              ),
+              child:null,
+            )
           ],
-        ),
+        )
       ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
