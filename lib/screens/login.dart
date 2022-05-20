@@ -53,7 +53,7 @@ class LoginState extends State<Login>{
                             },
                           ),
                           const SizedBox(
-                            height: 48.0,
+                            height: 20.0,
                           ),
                           TextFormField(
                             controller: _passwordController,
