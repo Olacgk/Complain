@@ -1,3 +1,4 @@
+import 'package:complain_app/screens/add-complaint.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -60,8 +61,10 @@ class HomeState extends State<Home>{
           ],
         )
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> NewComplain()));
+        },
         child: Icon(Icons.add),
         backgroundColor: Color.fromRGBO(79, 119, 223, 1.0),
       ),
