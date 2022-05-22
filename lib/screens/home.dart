@@ -1,4 +1,5 @@
 import 'package:complain_app/screens/add-complaint.dart';
+import 'package:complain_app/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -46,9 +47,12 @@ class HomeState extends State<Home>{
               leading: Icon(Icons.home_outlined, color: Color.fromRGBO(79, 119, 223, 1.0),),
               title: Text('Home'),
             ),
-            const ListTile(
-              leading: Icon(Icons.person_outline, color: Color.fromRGBO(79, 119, 223, 1.0),),
-              title: Text('Profile'),
+            ListTile(
+              leading: const Icon(Icons.person_outline, color: Color.fromRGBO(79, 119, 223, 1.0),),
+              title: const Text('Profile'),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Profile()));
+              },
             ),
             const ListTile(
               leading: Icon(Icons.settings, color: Color.fromRGBO(79, 119, 223, 1.0),),
@@ -63,10 +67,10 @@ class HomeState extends State<Home>{
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> NewComplain()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> const NewComplain()));
         },
-        child: Icon(Icons.add),
-        backgroundColor: Color.fromRGBO(79, 119, 223, 1.0),
+        child: const Icon(Icons.add),
+        backgroundColor: const Color.fromRGBO(79, 119, 223, 1.0),
       ),
     );
   }
